@@ -1,0 +1,22 @@
+###################################
+# Feedback Übung 1
+###################################
+
+A2) Idealerweise gewöhnst du dir an deine Code files mit einer Überschrift
+    zu versehen mit Autor, Datum, Zweck etc. Sieh mal in der Lösung nach.
+
+A4)
+1.  Korrekt
+
+2.  Du solltest rechts neben der Tablle für jede Zeile noch die Regel erwähnen,
+    die du auf dieser Zeile angewendet hast.
+    <ziffer> must du zuerst noch durch <geradeziffer>|<ungeradeziffer> ersetzen,
+    bevor du die 2 wählen kannst.
+
+3.  Deine Lösung erkannt zum Beispiel XXYYYY nicht. 
+
+4.  Nichts ist legal bei beiden Beispielen
+    Hingegen ist B  nur legal bei Beispiel1 nicht aber bei Beispiel2. 
+
+5.  Das ist nicht ganz richtig. Bei Deiner Regel ist zB xxxyy ein legales Symbol, was
+    es nicht sein sollte. Siehe Lösung 
