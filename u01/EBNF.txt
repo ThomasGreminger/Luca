@@ -1,22 +1,22 @@
-1.
-
-<geradezahl>     <= ...
+1. <digit> <= 1|2|3|4|5|6|7|8|9|0
+ <second_digit> <= 0|2|4|6|8
+<geradezahl>     <= [+|-]{<digit>}<second_digit>
 
 
 2.
-
-...
-
-
+            [+|-]{<digit>}<second_digit>
+nichts ausgewählt <digit>   8
+nichts ausgewählt    2      8
+					 28
 3.
 
-<x2ygemisch> <= ...
+<x2ygemisch> <= { |XYY}
 
 4.
+	//nichts auswählen
+	//legal bei beispiel eins.
+	//illegal bei beispiel zwei.
 
-...
+5. 
 
-
-5.
-
-<doppelt> <= ...
+<doppelt> <= {x}{YY}
