@@ -1,9 +1,9 @@
 public class FollerVehler {
-    public static main(String args) {
-        System.out.println(Hello world);
-        system.out.Pritnln("Gefällt Ihnen dieses Programm"?);
-        System.out.println()
+    public static void main(String args) {
+        System.out.println("Hello world");
+        System.out.println("Gefällt Ihnen dieses Programm?");
+        System.out.println("\n");
 
-        System.println("Ich habe es selbst geschrieben.";
-    {
+        System.out.println("Ich habe es selbst geschrieben.");
+    }
 }
