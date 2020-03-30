@@ -1,0 +1,37 @@
+####################
+# Feedback Übung 2
+####################
+
+A1) Achtung, du hast in der Deklaration der main-methode vergessen die [] nach String zu setzen,
+    Java erkennt so die Signatur nicht und kannn das Program nicht starten. Dein Programm startet so nicht.
+    Die main Methode erwartes als Argument ein String-Array also String[]. 
+
+
+A2) Sehr gut! Das "escaping" machst du korrekt.
+
+
+
+A3) Seht gut! Korrekt!
+    Du könntest noch einen Block Comment am Anfangen von jedem File einfügen. 
+    Etwa so
+   	/*
+ 	* Author: Luca Manna
+ 	* Einfuehrung in die Programmierung, 30. März 2020
+ 	* 
+ 	* Das Programm gibt die Schweizer Flagge auf der Konsole aus.
+ 	*/
+ 	
+A4) Hier brauchst Du die Scanner Klasse!
+	Scanner console = new Scanner(System.in);
+	int zahl = console.nextInt();
+	
+	Dieser Code liest Dir eine Integer von der Console ein und speichert den Wert in der
+	Integer Variablen zahl. 
+	Du kannst schon mal in der Lösung schauen wie das geht. 
+	
+	
+	
+A5) Wiederholugen
+	1. Richtig!
+	2.+3.+4. fehlt noch. 
+
