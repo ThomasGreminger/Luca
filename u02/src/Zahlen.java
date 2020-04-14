@@ -17,7 +17,6 @@ public class Zahlen {
 			System.out.println("Ungülteriger Code...");
 		} else {
 			System.out.println(result);
-
 		}
 
 	}
