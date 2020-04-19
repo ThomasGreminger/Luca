@@ -34,7 +34,7 @@ public class PerpetualCalendar {
      * Returns whether the given values represent a valid date
      */
     static boolean isValidDate(int day, int month, int year) {
-        return year >= 1900 && month > 1 && month <= 12
+        return year >= 1900 && month >= 1 && month <= 12
                 && day >= 1 && day <= countDaysInMonth(month, year);
     }
     
@@ -65,7 +65,7 @@ public class PerpetualCalendar {
             return 28;
         else if(month == 2)
             return 29;
-        else if(month <= 8 && month % 2 == 0 || month >= 8 && month % 2 == 1)
+        else if(month < 8 && month % 2 == 0 || month >= 8 && month % 2 == 1)
             return 30;
         else
             return 31;
@@ -75,7 +75,7 @@ public class PerpetualCalendar {
      * Returns the number of days in the given year
      */
     static int countDaysInYear(int year) {
-        if(isLeapYear(year))
+        if(!isLeapYear(year))
             return 365;
         else
             return 366;

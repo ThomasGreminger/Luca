@@ -40,6 +40,7 @@ public class PerpetualCalendarTest {
         assertEquals(3 * 365, PerpetualCalendar.countDays(1, 1, 1903));
         assertEquals(4 * 365, PerpetualCalendar.countDays(1, 1, 1904));
         assertEquals(5 * 365 + 1, PerpetualCalendar.countDays(1, 1, 1905));
+        assertEquals(0, PerpetualCalendar.countDays(1, 1, 1900));
     }
     
     @Test

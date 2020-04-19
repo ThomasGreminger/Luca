@@ -1,0 +1,113 @@
+NETHZ: grethoma
+
+testCorrectOrder: PASS
+testMany7: PASS
+testMultiple7: PASS
+testNo7: PASS
+testSimple7: PASS
+testSpecial: PASS
+testStress: PASS
+Erreichte Punkte durch Tests (von 5): 5
+
+Total Punkte (von 5): 5
+
+
+
+Folgende Test-Datei wurde für die Bewertung verwendet:
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class OhneSiebenTest {
+
+    @Test
+    public void testNo7() {
+        assertValidPair(3, OhneSieben.ohneSieben(3));
+        assertValidPair(5, OhneSieben.ohneSieben(5));
+        assertValidPair(8, OhneSieben.ohneSieben(8));
+        assertValidPair(20, OhneSieben.ohneSieben(20));
+        assertValidPair(200, OhneSieben.ohneSieben(200));
+    }
+
+    @Test
+    public void testSimple7() {
+        assertValidPair(17, OhneSieben.ohneSieben(17));
+        assertValidPair(70, OhneSieben.ohneSieben(70));
+        assertValidPair(71, OhneSieben.ohneSieben(71));
+        assertValidPair(72, OhneSieben.ohneSieben(72));
+        assertValidPair(74, OhneSieben.ohneSieben(74));
+        assertValidPair(171, OhneSieben.ohneSieben(171));
+        assertValidPair(700, OhneSieben.ohneSieben(700));
+    }
+
+    @Test
+    public void testMultiple7() {
+        assertValidPair(77, OhneSieben.ohneSieben(77));
+        assertValidPair(717, OhneSieben.ohneSieben(717));
+        assertValidPair(171717, OhneSieben.ohneSieben(171717));
+    }
+
+    @Test
+    public void testMany7() {
+        assertValidPair(777, OhneSieben.ohneSieben(777));
+        assertValidPair(7777, OhneSieben.ohneSieben(7777));
+        assertValidPair(6777, OhneSieben.ohneSieben(6777));
+        assertValidPair(7778, OhneSieben.ohneSieben(7778));
+        assertValidPair(77777, OhneSieben.ohneSieben(77777));
+    }
+
+    @Test
+    public void testSpecial() {
+        assertValidPair(1, OhneSieben.ohneSieben(1));
+        assertValidPair(2, OhneSieben.ohneSieben(2));
+        assertValidPair(6, OhneSieben.ohneSieben(6));
+        assertValidPair(7, OhneSieben.ohneSieben(7));
+    }
+
+    @Test
+    public void testCorrectOrder() {
+        assertCorrectOrder(OhneSieben.ohneSieben(5));
+        assertCorrectOrder(OhneSieben.ohneSieben(8));
+        assertCorrectOrder(OhneSieben.ohneSieben(20));
+        assertCorrectOrder(OhneSieben.ohneSieben(200));
+        
+        assertCorrectOrder(OhneSieben.ohneSieben(17));
+        assertCorrectOrder(OhneSieben.ohneSieben(171));
+        assertCorrectOrder(OhneSieben.ohneSieben(700));
+    }
+
+    @Test
+    public void testStress() {
+        for (int s = 1; s < 99; s++) {
+            assertValidPair(s, OhneSieben.ohneSieben(s));
+        }
+
+        for (int s = 2048; s < 2100; s++) {
+            assertValidPair(s, OhneSieben.ohneSieben(s));
+        }
+
+        for (int s = 67000; s < 67099; s++) {
+            assertValidPair(s, OhneSieben.ohneSieben(s));
+        }
+    }
+
+    private static void assertValidPair(int sum, int[] p) {
+        assertNotNull(p);
+        assertEquals(2, p.length);
+        assertNo7(p[0]);
+        assertNo7(p[1]);
+        assertEquals(sum, p[0] + p[1]);
+    }
+
+    private static void assertCorrectOrder(int[] p) {
+        assertNotNull(p);
+        assertEquals(2, p.length);
+        assertTrue(p[0] >= p[1]);
+        // no points for default return value of two 0s:
+        assertNotEquals(0, p[0] + p[1]);
+    }
+
+    private static void assertNo7(int num) {
+        assertFalse((num + "").contains("7"));
+    }
+}
