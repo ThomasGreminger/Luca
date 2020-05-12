@@ -18,7 +18,6 @@ public class Zahlen {
 		} else {
 			System.out.println(result);
 		}
-
 	}
 
 	public static String sortString(String inputString) {

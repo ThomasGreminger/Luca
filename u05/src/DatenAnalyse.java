@@ -1,4 +1,4 @@
-import java.io.File;
+ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import gui.Window; // dieser Import wird benoetigt, falls das Histogramm in einem Fenster gezeichnet wird und die Window-Klasse verwendet wird
@@ -134,3 +134,5 @@ public class DatenAnalyse {
 	}
 
 }
+
+
