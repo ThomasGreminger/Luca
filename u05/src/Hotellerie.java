@@ -17,6 +17,19 @@ public class Hotellerie {
 	
 	public static void analyse(Scanner input, PrintStream output) throws FileNotFoundException {
 		// TODO: Lesen Sie das Dateiinhalt von input und geben Sie Ihre Loesung nach output aus.
+		Scanner scanner=new Scanner(new File("hotelDaten1.txt"));
+		int numberBuchungen=scanner.nextInt();
+		String temp=scanner.nextLine();
+		for(int i=0;i<numberBuchungen;i++) {
+			temp=scanner.nextLine();
+			Scanner scanner1=new Scanner(temp);
+			int a=scanner1.nextInt();
+			int b=scanner1.nextInt();
+			int c=scanner1.nextInt();
+			double cost=scanner1.nextDouble();
+			System.out.println(temp);
+		}
+		
 		
 		// Ihr Code kommt hier hin
 		
