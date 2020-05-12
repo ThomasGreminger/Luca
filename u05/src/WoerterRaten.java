@@ -29,7 +29,7 @@ public class WoerterRaten {
 	 */
 	static void rateSpiel(String[] woerter) {
 		String zielWort = zufallsWort(woerter);
-		zielWort = "alloh";
+//		zielWort = "alloh";
 
 		Boolean richtigesWortGefunden = false;
 		while (!richtigesWortGefunden) {
